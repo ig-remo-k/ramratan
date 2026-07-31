@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA Course Outline | Ramratan</title>
+    <meta name="description" content="Complete 1st to 8th semester outline and syllabus for Bachelor of Computer Applications (BCA) in Nepal.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config for Custom Colors/Fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Icons (Phosphor Icons) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <style>
+        /* Custom scrollbar for a polished look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white flex flex-col min-h-screen">
+
+    <nav class="fixed w-full z-50 glass-effect border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.location.href='https://ramratan.info.np'">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-indigo-600 flex items-center justify-center text-white font-bold text-xl">
+                        R
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-slate-900">Ramratan<span class="text-brand-600">.info.np</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="https://ramratan.info.np" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Home</a>
+                    <a href="#" class="text-brand-600 font-medium border-b-2 border-brand-600 pb-1">BCA Syllabus</a>
+                    <a href="#" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Notes</a>
+                    <a href="#" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2 rounded-full font-medium transition-colors shadow-md shadow-brand-500/20">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none">
+                        <i class="ph ph-list text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="https://ramratan.info.np" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50">Home</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-brand-600 bg-brand-50">BCA Syllabus</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50">Notes</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-24 pb-16">
+        <!-- Hero Section -->
+        <div class="relative overflow-hidden">
+            <!-- Decorative background elements -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full overflow-hidden -z-10 pointer-events-none">
+                <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-brand-100 blur-3xl opacity-50"></div>
+                <div class="absolute top-32 -left-24 w-72 h-72 rounded-full bg-purple-100 blur-3xl opacity-50"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8 text-center">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-sm font-semibold mb-6">
+                    <i class="ph-fill ph-student"></i> Tribhuvan University (TU)
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-6">
+                    Bachelor of Computer <br class="hidden sm:block" />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-indigo-600">Applications (BCA)</span>
+                </h1>
+                <p class="max-w-2xl mx-auto text-lg text-slate-600 mb-10 leading-relaxed">
+                    Explore the complete 4-year, 8-semester outline for the BCA program in Nepal. Get details on all core subjects, electives, and practical projects.
+                </p>
+
+                <!-- Search/Filter Bar -->
+                <div class="max-w-xl mx-auto relative group">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-brand-500 transition-colors">
+                        <i class="ph ph-magnifying-glass text-xl"></i>
+                    </div>
+                    <input type="text" id="searchInput" placeholder="Search for a subject (e.g., 'Java', 'Math')..." 
+                        class="block w-full pl-11 pr-4 py-4 rounded-2xl border-0 ring-1 ring-inset ring-slate-200 focus:ring-2 focus:ring-inset focus:ring-brand-500 shadow-sm text-slate-900 bg-white/80 backdrop-blur-sm transition-all text-base placeholder:text-slate-400">
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="syllabusContainer">
+                
+                <!-- Semester 1 -->
+                <div class="semester-card bg-white rounded-2xl shadow-sm border border-slate-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-brand-50 to-transparent rounded-bl-full -z-0 opacity-50 group-hover:scale-110 transition-transform"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4 border-b border-slate-100 pb-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center font-bold text-lg">
+                                1
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-800">First Semester</h2>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-brand-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Computer Fundamentals</span>
+                                    <span class="text-slate-500 text-xs font-mono">CACS101</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-brand-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Society and Technology</span>
+                                    <span class="text-slate-500 text-xs font-mono">CACS102</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-brand-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">English I</span>
+                                    <span class="text-slate-500 text-xs font-mono">CAEN103</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-brand-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Mathematics I</span>
+                                    <span class="text-slate-500 text-xs font-mono">CAMT104</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-brand-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Digital Logic</span>
+                                    <span class="text-slate-500 text-xs font-mono">CACS105</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Semester 2 -->
+                <div class="semester-card bg-white rounded-2xl shadow-sm border border-slate-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-indigo-50 to-transparent rounded-bl-full -z-0 opacity-50 group-hover:scale-110 transition-transform"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4 border-b border-slate-100 pb-4">
+                            <div class="w-10 h-10 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-lg">
+                                2
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-800">Second Semester</h2>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-indigo-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">C Programming</span>
+                                    <span class="text-slate-500 text-xs font-mono">CACS151</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-indigo-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Financial Accounting</span>
+                                    <span class="text-slate-500 text-xs font-mono">CAAC152</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-indigo-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">English II</span>
+                                    <span class="text-slate-500 text-xs font-mono">CAEN153</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-indigo-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Mathematics II</span>
+                                    <span class="text-slate-500 text-xs font-mono">CAMT154</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-indigo-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Microprocessor & Arch.</span>
+                                    <span class="text-slate-500 text-xs font-mono">CACS155</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Semester 3 -->
+                <div class="semester-card bg-white rounded-2xl shadow-sm border border-slate-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-cyan-50 to-transparent rounded-bl-full -z-0 opacity-50 group-hover:scale-110 transition-transform"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4 border-b border-slate-100 pb-4">
+                            <div class="w-10 h-10 rounded-full bg-cyan-100 text-cyan-600 flex items-center justify-center font-bold text-lg">
+                                3
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-800">Third Semester</h2>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-cyan-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Data Structures & Algo</span>
+                                    <span class="text-slate-500 text-xs font-mono">CACS201</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-cyan-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Probability & Statistics</span>
+                                    <span class="text-slate-500 text-xs font-mono">CAST202</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-cyan-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">System Analysis & Design</span>
+                                    <span class="text-slate-500 text-xs font-mono">CACS203</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-cyan-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">OOP in Java</span>
+                                    <span class="text-slate-500 text-xs font-mono">CACS204</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-cyan-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Web Technology</span>
+                                    <span class="text-slate-500 text-xs font-mono">CACS205</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Semester 4 -->
+                <div class="semester-card bg-white rounded-2xl shadow-sm border border-slate-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-emerald-50 to-transparent rounded-bl-full -z-0 opacity-50 group-hover:scale-110 transition-transform"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4 border-b border-slate-100 pb-4">
+                            <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-lg">
+                                4
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-800">Fourth Semester</h2>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-emerald-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Operating System</span>
+                                    <span class="text-slate-500 text-xs font-mono">CACS251</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-emerald-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Numerical Methods</span>
+                                    <span class="text-slate-500 text-xs font-mono">CAMT252</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-emerald-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Software Engineering</span>
+                                    <span class="text-slate-500 text-xs font-mono">CACS253</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-emerald-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Scripting Language</span>
+                                    <span class="text-slate-500 text-xs font-mono">CACS254</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-emerald-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">DBMS</span>
+                                    <span class="text-slate-500 text-xs font-mono">CACS255</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-folder-notch-open text-emerald-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Project I</span>
+                                    <span class="text-slate-500 text-xs font-mono">CAPR256</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                
+                <!-- Semester 5 -->
+                <div class="semester-card bg-white rounded-2xl shadow-sm border border-slate-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-amber-50 to-transparent rounded-bl-full -z-0 opacity-50 group-hover:scale-110 transition-transform"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4 border-b border-slate-100 pb-4">
+                            <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-lg">
+                                5
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-800">Fifth Semester</h2>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-amber-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">MIS & E-Business</span>
+                                    <span class="text-slate-500 text-xs font-mono">CACS301</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-amber-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">DotNet Technology</span>
+                                    <span class="text-slate-500 text-xs font-mono">CACS302</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-amber-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Computer Networking</span>
+                                    <span class="text-slate-500 text-xs font-mono">CACS303</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-amber-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Intro to Management</span>
+                                    <span class="text-slate-500 text-xs font-mono">CAMG304</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-amber-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Computer Graphics</span>
+                                    <span class="text-slate-500 text-xs font-mono">CACS305</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Semester 6 -->
+                <div class="semester-card bg-white rounded-2xl shadow-sm border border-slate-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-rose-50 to-transparent rounded-bl-full -z-0 opacity-50 group-hover:scale-110 transition-transform"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4 border-b border-slate-100 pb-4">
+                            <div class="w-10 h-10 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-lg">
+                                6
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-800">Sixth Semester</h2>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-rose-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Mobile Programming</span>
+                                    <span class="text-slate-500 text-xs font-mono">CACS351</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-rose-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Distributed System</span>
+                                    <span class="text-slate-500 text-xs font-mono">CACS352</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-rose-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Applied Economics</span>
+                                    <span class="text-slate-500 text-xs font-mono">CAEC353</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-rose-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Advanced Java Prog.</span>
+                                    <span class="text-slate-500 text-xs font-mono">CACS354</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-rose-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Network Programming</span>
+                                    <span class="text-slate-500 text-xs font-mono">CACS355</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-folder-notch-open text-rose-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Project II</span>
+                                    <span class="text-slate-500 text-xs font-mono">CAPR356</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Semester 7 -->
+                <div class="semester-card bg-white rounded-2xl shadow-sm border border-slate-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-violet-50 to-transparent rounded-bl-full -z-0 opacity-50 group-hover:scale-110 transition-transform"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4 border-b border-slate-100 pb-4">
+                            <div class="w-10 h-10 rounded-full bg-violet-100 text-violet-600 flex items-center justify-center font-bold text-lg">
+                                7
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-800">Seventh Semester</h2>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-violet-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Cyber Law & Ethics</span>
+                                    <span class="text-slate-500 text-xs font-mono">CACS401</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-violet-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Cloud Computing</span>
+                                    <span class="text-slate-500 text-xs font-mono">CACS402</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-briefcase text-violet-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Internship</span>
+                                    <span class="text-slate-500 text-xs font-mono">CAIN403</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-plus-circle text-violet-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Elective I</span>
+                                    <span class="text-slate-500 text-xs">Subject to college</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-plus-circle text-violet-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Elective II</span>
+                                    <span class="text-slate-500 text-xs">Subject to college</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Semester 8 -->
+                <div class="semester-card bg-white rounded-2xl shadow-sm border border-slate-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-fuchsia-50 to-transparent rounded-bl-full -z-0 opacity-50 group-hover:scale-110 transition-transform"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4 border-b border-slate-100 pb-4">
+                            <div class="w-10 h-10 rounded-full bg-fuchsia-100 text-fuchsia-600 flex items-center justify-center font-bold text-lg">
+                                8
+                            </div>
+                            <h2 class="text-xl font-bold text-slate-800">Eighth Semester</h2>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-check-circle text-fuchsia-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Operations Research</span>
+                                    <span class="text-slate-500 text-xs font-mono">CAMT451</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-folder-notch-open text-fuchsia-500 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Project III</span>
+                                    <span class="text-slate-500 text-xs font-mono">CAPR452</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-plus-circle text-fuchsia-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Elective III</span>
+                                    <span class="text-slate-500 text-xs">Subject to college</span>
+                                </div>
+                            </li>
+                            <li class="subject-item flex items-start gap-2 text-sm">
+                                <i class="ph-fill ph-plus-circle text-fuchsia-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-700 block">Elective IV</span>
+                                    <span class="text-slate-500 text-xs">Subject to college</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- No Results State -->
+            <div id="noResults" class="hidden py-12 text-center">
+                <i class="ph ph-files text-4xl text-slate-300 mb-3 block"></i>
+                <h3 class="text-lg font-medium text-slate-900">No subjects found</h3>
+                <p class="text-slate-500">Try adjusting your search terms.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-lg">
+                            R
+                        </div>
+                        <span class="font-bold text-xl text-slate-900">Ramratan.info.np</span>
+                    </div>
+                    <p class="text-sm text-slate-500 mb-4">
+                        Your dedicated portal for BCA syllabus, notes, and technical resources in Nepal.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-slate-900 mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-slate-600 hover:text-brand-600 transition-colors">Home</a></li>
+                        <li><a href="#" class="text-brand-600 font-medium">BCA Syllabus</a></li>
+                        <li><a href="#" class="text-slate-600 hover:text-brand-600 transition-colors">Study Materials</a></li>
+                        <li><a href="#" class="text-slate-600 hover:text-brand-600 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-slate-900 mb-4">Connect</h3>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                            <i class="ph ph-facebook-logo text-xl"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                            <i class="ph ph-twitter-logo text-xl"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                            <i class="ph ph-instagram-logo text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-slate-100 mt-8 pt-8 text-center text-sm text-slate-500">
+                &copy; <span id="year"></span> Ramratan.info.np. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Navbar blur effect on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-sm');
+            } else {
+                nav.classList.remove('shadow-sm');
+            }
+        });
+
+        // Real-time Search / Filter functionality
+        const searchInput = document.getElementById('searchInput');
+        const semesterCards = document.querySelectorAll('.semester-card');
+        const noResults = document.getElementById('noResults');
+
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            let visibleCardsCount = 0;
+
+            semesterCards.forEach(card => {
+                const subjects = card.querySelectorAll('.subject-item');
+                let hasMatch = false;
+
+                // Also check if the semester title itself matches (e.g. "first semester")
+                const semTitle = card.querySelector('h2').textContent.toLowerCase();
+                
+                subjects.forEach(subject => {
+                    const text = subject.textContent.toLowerCase();
+                    if (text.includes(searchTerm) || semTitle.includes(searchTerm)) {
+                        subject.style.display = 'flex';
+                        hasMatch = true;
+                    } else {
+                        // If searching by specific subject, hide non-matching subjects in the same card
+                        // UNLESS the user just typed a semester name like "first"
+                        if(semTitle.includes(searchTerm) && searchTerm.length > 2) {
+                            subject.style.display = 'flex';
+                            hasMatch = true;
+                        } else {
+                            subject.style.display = 'none';
+                        }
+                    }
+                });
+
+                if (hasMatch || searchTerm === '') {
+                    card.style.display = 'block';
+                    visibleCardsCount++;
+                    // If search is cleared, show all subjects
+                    if(searchTerm === '') {
+                        subjects.forEach(s => s.style.display = 'flex');
+                    }
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Toggle "No Results" message
+            if (visibleCardsCount === 0 && searchTerm !== '') {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
