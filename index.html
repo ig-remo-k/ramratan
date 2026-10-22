@@ -42,7 +42,6 @@
         "addressCountry": "Nepal"
       },
       "email": "remokushwaha21@gmail.com",
-      "telephone": "+977-9866122839",
       "sameAs": [
         "https://www.linkedin.com/in/ramratan-kushwaha-490582382/"
       ]
@@ -724,37 +723,6 @@
             border: 4px solid;
         }
 
-        /* YouTube Tags Styles */
-        .yt-tag-cloud {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--space-sm);
-            margin-top: var(--space-md);
-            padding: var(--space-md);
-            background-color: var(--bg-body);
-            border-radius: 0.5rem;
-            border: 1px solid var(--border);
-        }
-        
-        .yt-tag {
-            padding: 0.4rem 0.8rem;
-            background-color: var(--bg-surface);
-            border: 1px solid var(--border);
-            border-radius: 2rem;
-            font-size: 0.85rem;
-            color: var(--text-primary);
-            display: inline-flex;
-            align-items: center;
-            box-shadow: var(--shadow-sm);
-            transition: all 0.2s ease;
-        }
-        
-        .yt-tag:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-            transform: translateY(-1px);
-        }
-
         /* CV Maker Styles */
         .cv-layout {
             display: grid;
@@ -936,7 +904,6 @@
                 <li><a href="#seo-auditor">SEO Auditor</a></li>
                 <li><a href="#ai-outline">AI Outline</a></li>
                 <li><a href="#ai-seo-titles">SEO Titles</a></li>
-                <li><a href="#yt-tags">YT Tags</a></li>
                 <li><a href="#cv-maker" style="color: var(--accent); font-weight: 600;">CV Maker</a></li>
             </ul>
         </div>
@@ -961,12 +928,6 @@
                                 <polyline points="22,6 12,13 2,6"></polyline>
                             </svg>
                             remokushwaha21@gmail.com
-                        </a>
-                        <a href="tel:+9779866122839" class="contact-tag" aria-label="Phone Number">
-                            <svg class="icon" viewBox="0 0 24 24">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
-                            +977-9866122839
                         </a>
                         <span class="contact-tag" aria-label="Location">
                             <svg class="icon" viewBox="0 0 24 24">
@@ -1282,46 +1243,6 @@
             </div>
         </div>
 
-        <!-- PAGE: YOUTUBE TAG GENERATOR -->
-        <div id="page-yt-tags" class="spa-page">
-            <div class="container page-header reveal">
-                <h2>YouTube Tag Generator</h2>
-                <p style="color: var(--text-secondary);">Generate high-volume, SEO-optimized tags for your YouTube videos based on your target keyword.</p>
-            </div>
-            <div class="container reveal" style="padding-bottom: var(--space-3xl);">
-                <div class="tool-container">
-                    <form id="ytTagGeneratorForm">
-                        <div class="form-group">
-                            <label class="form-label" for="ytKeyword">Video Topic or Main Keyword</label>
-                            <input class="form-input" type="text" id="ytKeyword" placeholder="e.g., Technical SEO Tutorial" required>
-                        </div>
-                        
-                        <button type="submit" class="btn" id="generateYtTagsBtn">
-                            <span id="ytTagsBtnText">Generate Tags</span>
-                            <div class="loader" id="ytTagsBtnLoader"></div>
-                        </button>
-                    </form>
-                    
-                    <div class="results-box" id="ytTagsResultsBox">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-sm);">
-                            <h3 class="result-header" style="margin: 0;">Generated Tags</h3>
-                            <button class="btn" id="copyYtTagsBtn" style="padding: 0.4rem 0.8rem; font-size: 0.85rem; background-color: var(--bg-surface); color: var(--text-primary); border: 1px solid var(--border);">
-                                <svg class="icon" viewBox="0 0 24 24" style="width: 14px; height: 14px; margin-right: 4px;">
-                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                </svg>
-                                Copy All for YT
-                            </button>
-                        </div>
-                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">Tags are copied as a comma-separated list, ready to paste directly into YouTube Studio.</p>
-                        <div class="yt-tag-cloud" id="ytTagCloud" data-tags="">
-                            <!-- Tags will be injected here -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- PAGE: CV MAKER -->
         <div id="page-cv-maker" class="spa-page">
             <div class="container page-header reveal">
@@ -1423,7 +1344,7 @@
             function handleRouting() {
                 let hash = window.location.hash.substring(1) || 'home';
                 
-                const routes = ['home', 'rank-checker', 'speed-analyzer', 'seo-auditor', 'ai-outline', 'ai-seo-titles', 'yt-tags', 'cv-maker'];
+            const routes = ['home', 'rank-checker', 'speed-analyzer', 'seo-auditor', 'ai-outline', 'ai-seo-titles', 'cv-maker'];
                 if (!routes.includes(hash)) {
                     hash = 'home';
                 }
@@ -1882,123 +1803,6 @@ Tone: ${tone}`;
                             copyBtn.innerHTML = originalHTML;
                             copyBtn.style.color = "";
                             copyBtn.style.borderColor = "";
-                        }, 2000);
-                    }
-                });
-            }
-
-            // YouTube Tag Generator Logic
-            const ytTagForm = document.getElementById('ytTagGeneratorForm');
-            
-            if (ytTagForm) {
-                ytTagForm.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    
-                    const btn = document.getElementById('generateYtTagsBtn');
-                    const btnText = document.getElementById('ytTagsBtnText');
-                    const btnLoader = document.getElementById('ytTagsBtnLoader');
-                    const resultsBox = document.getElementById('ytTagsResultsBox');
-                    const tagCloud = document.getElementById('ytTagCloud');
-                    
-                    const keyword = document.getElementById('ytKeyword').value.trim();
-                    
-                    // Set loading state
-                    btn.disabled = true;
-                    btnText.style.display = 'none';
-                    btnLoader.classList.add('active');
-                    resultsBox.classList.remove('active');
-                    
-                    // Simulate API Delay
-                    setTimeout(() => {
-                        // Restore button
-                        btn.disabled = false;
-                        btnText.style.display = 'inline-block';
-                        btnLoader.classList.remove('active');
-                        
-                        // Generate mock tags based on input
-                        const base = keyword.toLowerCase();
-                        const rawTags = [
-                            base,
-                            `${base} 2026`,
-                            `${base} tutorial`,
-                            `how to ${base}`,
-                            `what is ${base}`,
-                            `${base} for beginners`,
-                            `${base} full course`,
-                            `${base} explained`,
-                            `${base} step by step`,
-                            `best ${base}`,
-                            `${base} tips`,
-                            `${base} guide`,
-                            `advanced ${base}`,
-                            `${base} strategies`,
-                            `${base} examples`
-                        ];
-                        
-                        // Shuffle and pick 10-12 tags for realism
-                        const shuffled = rawTags.sort(() => 0.5 - Math.random());
-                        const selectedTags = shuffled.slice(0, 12);
-                        
-                        // Clear existing tags
-                        tagCloud.innerHTML = '';
-                        
-                        // Append new tags
-                        selectedTags.forEach(tagText => {
-                            const span = document.createElement('span');
-                            span.className = 'yt-tag';
-                            span.textContent = tagText;
-                            tagCloud.appendChild(span);
-                        });
-                        
-                        // Store the comma-separated string for the copy button
-                        const commaSeparatedString = selectedTags.join(', ');
-                        tagCloud.dataset.tags = commaSeparatedString;
-                        
-                        // Show results box
-                        resultsBox.classList.add('active');
-                        resultsBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                        
-                    }, 1800);
-                });
-                
-                // Copy YouTube Tags functionality
-                const copyYtBtn = document.getElementById('copyYtTagsBtn');
-                copyYtBtn.addEventListener('click', () => {
-                    const tagCloud = document.getElementById('ytTagCloud');
-                    const textToCopy = tagCloud.dataset.tags;
-                    
-                    if (!textToCopy) return;
-                    
-                    if (navigator.clipboard && window.isSecureContext) {
-                        navigator.clipboard.writeText(textToCopy).then(() => {
-                            showYtCopySuccess();
-                        });
-                    } else {
-                        const textArea = document.createElement("textarea");
-                        textArea.value = textToCopy;
-                        textArea.style.position = "fixed";
-                        document.body.appendChild(textArea);
-                        textArea.focus();
-                        textArea.select();
-                        try {
-                            document.execCommand('copy');
-                            showYtCopySuccess();
-                        } catch (err) {
-                            console.error('Fallback: Oops, unable to copy', err);
-                        }
-                        document.body.removeChild(textArea);
-                    }
-                    
-                    function showYtCopySuccess() {
-                        const originalHTML = copyYtBtn.innerHTML;
-                        copyYtBtn.innerHTML = `<svg class="icon" viewBox="0 0 24 24" style="width: 14px; height: 14px; margin-right: 4px; stroke: #10b981;"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!`;
-                        copyYtBtn.style.color = "#10b981";
-                        copyYtBtn.style.borderColor = "#10b981";
-                        
-                        setTimeout(() => {
-                            copyYtBtn.innerHTML = originalHTML;
-                            copyYtBtn.style.color = "";
-                            copyYtBtn.style.borderColor = "";
                         }, 2000);
                     }
                 });
